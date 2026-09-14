@@ -39,7 +39,7 @@
   <div class="actions">
     <a class="btn" href="https://maps.app.goo.gl/pW1QQvwpiygftcNfA" target="_blank" rel="noopener">📍 موقع الحفل</a>
     <button class="btn" onclick="addCalendar()">📅 أضف الموعد</button>
-    <button id="soundBtn" class="btn full" onclick="toggleCelebrationSound()">🔊 إيقاف صوت الأفراح</button>
+    <button id="soundBtn" class="btn full" onclick="toggleCelebrationSound()">🔊 إيقاف الأغنية</button>
     <button id="voiceBtn" class="btn full" onclick="welcomeVoice()">🗣️ صوت ترحيبي</button>
   </div>
 
@@ -61,7 +61,7 @@
 </div>
 </section></main>
 
-<audio id="celebrationAudio" src="celebration_ambience.wav" preload="auto"></audio>
+<audio id="celebrationAudio" src="wedding_song.mp3" preload="auto"></audio>
 
 <script>
 const target=new Date('2026-09-29T20:30:00+03:00').getTime();
@@ -119,10 +119,10 @@ function toggleCelebrationSound(){
   const btn=document.getElementById('soundBtn');
   if(audio.paused){
     audio.play().catch(()=>{});
-    btn.textContent='🔊 إيقاف صوت الأفراح';
+    btn.textContent='🔊 إيقاف الأغنية';
   }else{
     audio.pause();
-    btn.textContent='🔈 تشغيل صوت الأفراح';
+    btn.textContent='🔈 تشغيل الأغنية';
   }
 }
 function welcomeVoice(){
